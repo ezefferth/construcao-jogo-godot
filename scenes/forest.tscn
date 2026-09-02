@@ -94,9 +94,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="Camera2D" parent="." unique_id=1673570123 instance=ExtResource("10_3knxq")]
-limit_left = 0
-limit_bottom = 208
-position_smoothing_enabled = false
 
 [node name="levelEnd" parent="." unique_id=1999483260 instance=ExtResource("12_j3csf")]
 position = Vector2(269, 152)
