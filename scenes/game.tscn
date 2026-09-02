@@ -1,10 +1,14 @@
 [gd_scene format=4 uid="uid://c067j14duof1w"]
 
+[ext_resource type="PackedScene" uid="uid://b2ivj4dyhq64n" path="res://entities/camera_2d.tscn" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://bvj10qqe6tk8d" path="res://entities/player.tscn" id="1_uwrxv"]
 [ext_resource type="TileSet" uid="uid://jc2ulsbtihxw" path="res://tiles/terrain.tres" id="2_lnu2h"]
 [ext_resource type="TileSet" uid="uid://cviuh6ic12kvc" path="res://tiles/decoration.tres" id="3_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://68o7x2b5sgob" path="res://entities/level_end.tscn" id="4_lbhrr"]
 
 [node name="game" type="Node2D" unique_id=539681893]
+
+[node name="Camera2D" parent="." unique_id=1673570123 instance=ExtResource("1_iywne")]
 
 [node name="player" parent="." unique_id=870111983 instance=ExtResource("1_uwrxv")]
 position = Vector2(89, 28)
@@ -19,3 +23,7 @@ tile_set = ExtResource("2_lnu2h")
 [node name="decoration" type="TileMapLayer" parent="tiles" unique_id=1441092698]
 tile_map_data = PackedByteArray("AAAHAAUAAAABAAUAAAALAAUAAAABAAUAAAAPAAUAAAADAAUAAAAQAAUAAAAFAAUAAAARAAUAAAAGAAUAAAASAAUAAAAHAAUAAAATAAUAAAAOAAUAAAATAAEAAAAOAAQAAAAUAAEAAAAPAAQAAAAXAAEAAAAPAAQAAAAYAAEAAAAPAAQAAAAZAAEAAAASAAQAAAAZAAIAAAASAAUAAAAWAAQAAAAQAAUAAAAWAAMAAAAQAAUAAAAWAAIAAAAQAAUAAAAWAAEAAAAQAAQAAAAVAAEAAAAPAAQAAAATAAIAAAAOAAUAAAATAAMAAAAOAAUAAAATAAQAAAAOAAUAAAAJAAQAAAAJAAEAAAACAAIAAAABAAEAAAAFAAUAAQAAAAAAAAAGAAUAAQABAAAAAAADAAMAAQACAAAAAAANAAUAAQADAAAAAAAVAAQAAQADAAAAAAAYAAIAAQACAAAAAAAkAAAAAgAAAAAAAAA0AAEAAgAIAAAAAAAbAAIAAQABAAAAAAAcAAEAAAABAAEAAAAcAAIAAQAAAAAAAAAdAAEAAAAJAAEAAAAeAAIAAQAAAAAAAAAfAAIAAQABAAAAAAAoAAIAAQABAAAAAAApAAEAAAABAAEAAAApAAIAAQAAAAAAAAAqAAEAAAAJAAEAAAArAAIAAQAAAAAAAAAsAAIAAQABAAAAAAA6AAQAAQABAAAAAAA7AAMAAAABAAEAAAA7AAQAAQAAAAAAAAA8AAMAAAAJAAEAAAA9AAQAAQAAAAAAAAA+AAQAAQABAAAAAAA=")
 tile_set = ExtResource("3_lbhrr")
+
+[node name="levelEnd" parent="." unique_id=123420776 instance=ExtResource("4_lbhrr")]
+position = Vector2(380, -9)
+next_level = "forest"

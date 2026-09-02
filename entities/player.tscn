@@ -114,6 +114,8 @@ animations = [{
 [node name="player" type="CharacterBody2D" unique_id=1587354535 groups=["player"]]
 texture_repeat = 2
 position = Vector2(57, 31)
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_b0kkn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=828112370]
@@ -124,6 +126,5 @@ z_index = 1
 texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_t07pf")
-animation = &"walk"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.6110793

@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bgqjj5f80v4kb"]
+[gd_scene format=4 uid="uid://psmno8pemc1c"]
 
 [ext_resource type="PackedScene" uid="uid://bvj10qqe6tk8d" path="res://entities/player.tscn" id="1_0afsd"]
 [ext_resource type="TileSet" uid="uid://b1x2ibcg80e70" path="res://utils/terreno.tres" id="2_0afsd"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bwedevduhlcbx" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="8_j3csf"]
 [ext_resource type="Texture2D" uid="uid://dvkpr5h28glsi" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="9_dabdc"]
 [ext_resource type="PackedScene" uid="uid://b2ivj4dyhq64n" path="res://entities/camera_2d.tscn" id="10_3knxq"]
+[ext_resource type="PackedScene" uid="uid://68o7x2b5sgob" path="res://entities/level_end.tscn" id="12_j3csf"]
 
 [node name="forest" type="Node2D" unique_id=872300598]
 
@@ -93,3 +94,10 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="Camera2D" parent="." unique_id=1673570123 instance=ExtResource("10_3knxq")]
+limit_left = 0
+limit_bottom = 208
+position_smoothing_enabled = false
+
+[node name="levelEnd" parent="." unique_id=1999483260 instance=ExtResource("12_j3csf")]
+position = Vector2(269, 152)
+next_level = "tropical"

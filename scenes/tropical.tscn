@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://budosaofbjcex" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/2 - Waters_version_2.png" id="7_fws66"]
 [ext_resource type="Texture2D" uid="uid://bscpuvwy837jj" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/1 - Waters_version_1.png" id="8_hh0fu"]
 [ext_resource type="PackedScene" uid="uid://b2ivj4dyhq64n" path="res://entities/camera_2d.tscn" id="10_dubn7"]
+[ext_resource type="PackedScene" uid="uid://68o7x2b5sgob" path="res://entities/level_end.tscn" id="11_lvend"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t07pf"]
 animations = [{
@@ -40,6 +41,7 @@ tile_set = ExtResource("3_rnjyy")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1378807854]
 
 [node name="5-sky" type="ParallaxLayer" parent="ParallaxBackground" unique_id=494912218]
+texture_filter = 1
 texture_repeat = 2
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(288, 0)
@@ -51,6 +53,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=617647178]
+texture_filter = 1
 texture_repeat = 2
 motion_scale = Vector2(0.1, 0.2)
 motion_mirroring = Vector2(288, 0)
@@ -62,6 +65,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=498572779]
+texture_filter = 1
 texture_repeat = 2
 motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(288, 0)
@@ -73,6 +77,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=72280190]
+texture_filter = 1
 texture_repeat = 2
 motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(288, 0)
@@ -84,6 +89,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=784867254]
+texture_filter = 1
 texture_repeat = 2
 motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(288, 0)
@@ -94,3 +100,9 @@ autoplay = "default"
 centered = false
 
 [node name="Camera2D" parent="." unique_id=1673570123 groups=["player"] instance=ExtResource("10_dubn7")]
+limit_left = 0
+limit_bottom = 208
+
+[node name="levelEnd" parent="." unique_id=123420776 instance=ExtResource("11_lvend")]
+position = Vector2(187, 175)
+next_level = "forest"
