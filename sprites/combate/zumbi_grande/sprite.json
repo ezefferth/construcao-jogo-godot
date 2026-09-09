@@ -1,0 +1,28 @@
+{
+  "celula": [
+    71,
+    68
+  ],
+  "animacoes": {
+    "attack": {
+      "quadros": 7,
+      "direcao_origem": "south-east"
+    },
+    "death": {
+      "quadros": 7,
+      "direcao_origem": "south-east"
+    },
+    "hurt": {
+      "quadros": 7,
+      "direcao_origem": "south-east"
+    },
+    "idle": {
+      "quadros": 8,
+      "direcao_origem": "south-east"
+    },
+    "walk": {
+      "quadros": 8,
+      "direcao_origem": "south-east"
+    }
+  }
+}
