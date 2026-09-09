@@ -27,6 +27,10 @@
     "walk": {
       "quadros": 8,
       "direcao_origem": "east"
+    },
+    "jump": {
+      "quadros": 7,
+      "direcao_origem": "south-east"
     }
   }
 }

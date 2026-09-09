@@ -10,7 +10,7 @@ sprite de pular de tamanho ao trocar de estado.
 
 | Personagem | Célula | Animações |
 |---|---|---|
-| `sobrevivente` | 68 × 64 | `idle` 8 · `walk` 8 · `run` 8 · `attack` 7 · `hurt` 7 · `death` 7 |
+| `sobrevivente` | 68 × 64 | `idle` 8 · `walk` 8 · `run` 8 · `jump` 7 · `attack` 7 · `hurt` 7 · `death` 7 |
 | `zumbi_lento` | 70 × 67 | `idle` 8 · `walk` 8 · `attack` 6 · `hurt` 7 · `death` 7 |
 | `zumbi_rapido` | 70 × 67 | `idle` 8 · **`run` 8** · `attack` 6 · `hurt` 7 · `death` 7 |
 | `zumbi_grande` | 71 × 68 | `idle` 8 · `walk` 8 · `attack` 7 · `hurt` 7 · `death` 7 |
@@ -48,6 +48,10 @@ diferentes (no zumbi lento vieram 64, 88 e 92), e aqui foram levadas todas para 
 **ancoradas pelo pé** do primeiro quadro de cada animação — a base, e não o centro, porque é o pé
 que toca o chão e precisa ficar parado quando o estado troca.
 
-O sobrevivente veio em vista lateral pura. Os zumbis vieram em três quartos, virados para a direita:
+O `jump` do sobrevivente veio depois dos outros, em três quartos (`south-east`), e foi encaixado na
+mesma célula 68 × 64 pela mesma âncora. No quadro do ápice, 7 pixels do topo do cabelo ficaram de
+fora — a alternativa era aumentar a célula e obrigar a reimportar as outras seis animações.
+
+O sobrevivente veio em vista lateral pura, com essa exceção. Os zumbis vieram em três quartos, virados para a direita:
 a silhueta lê bem em movimento, mas se um dia forem regerados, vale pedir perfil puro para casar
 melhor com o jogador.
