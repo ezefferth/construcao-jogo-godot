@@ -41,11 +41,14 @@ var status: ZumbiState
 @export var dano: int = 1
 
 # Cuidado com as duas distâncias, porque elas dependem de outras coisas:
-#  - a visão precisa caber na tela (288 px), senão ele persegue antes de aparecer;
-#  - a área de ataque precisa alcançar `distancia_de_ataque - 12`, senão ele
-#    ataca no vazio para sempre, com a animação tocando certinho.
+#  - a visão precisa ficar abaixo de MEIA TELA (144 px). A tela tem 288, mas a
+#    câmera centraliza o jogador: acima de 144 o zumbi acorda fora do campo de
+#    visão e chega perseguindo sem ninguém ter visto a decisão dele;
+#  - a área de ataque precisa alcançar `distancia_de_ataque - 10` (o raio do
+#    colisor do jogador), senão ele ataca no vazio para sempre, com a animação
+#    tocando certinho.
 @export var distancia_de_ataque: float = 60.0
-@export var distancia_de_visao: float = 170.0
+@export var distancia_de_visao: float = 130.0
 
 # O nome da animação de andar é @export porque o zumbi rápido tem "run" e os
 # outros têm "walk". Escrito dentro do chase_state(), este caso exigiria um

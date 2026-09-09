@@ -302,6 +302,12 @@ height = 64.0
 size = Vector2(44, 44)
 
 [node name="Zumbi" type="CharacterBody2D" unique_id=718511267]
+vida_maxima = 8
+velocidade = 25.0
+dano = 2
+distancia_de_ataque = 74.0
+distancia_de_visao = 120.0
+tempo_entre_ataques = 2.0
 script = ExtResource("1_3l23r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=201205818]
