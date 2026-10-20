@@ -67,6 +67,9 @@ region = Rect2(32, 16, 16, 16)
 atlas = ExtResource("2_mi7s2")
 region = Rect2(48, 16, 16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hurt"]
+radius = 6.0
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dk2l0"]
 animations = [{
 "frames": [{
@@ -141,7 +144,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_raifr"]
 size = Vector2(10, 6)
 
-[node name="Jogador" type="CharacterBody2D" unique_id=727485311]
+[node name="Jogador" type="CharacterBody2D" unique_id=727485311 groups=["player"]]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_m0gj8")
 
@@ -160,3 +164,11 @@ limit_left = 0
 limit_top = 0
 limit_right = 640
 limit_bottom = 384
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_hurt")
