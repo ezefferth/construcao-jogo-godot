@@ -2,6 +2,8 @@ extends Node2D
 
 @export var cena_inimigo: PackedScene
 
+var abates := 0
+
 @onready var horda: Timer = $Horda
 @onready var relogio: Timer = $Relogio
 @onready var jogador := $Jogador
@@ -10,7 +12,7 @@ extends Node2D
 
 
 func _process(_delta: float) -> void:
-	texto_vida.text = "Vida: %d" % jogador.vida
+	texto_vida.text = "Vida: %d   Abates: %d" % [jogador.vida, abates]
 	texto_tempo.text = "Tempo: %d" % ceil(relogio.time_left)
 
 
@@ -21,6 +23,10 @@ func _on_horda_timeout() -> void:
 
 	# A horda aperta: cada inimigo chega um pouco mais cedo que o anterior.
 	horda.wait_time = max(0.5, horda.wait_time * 0.95)
+
+
+func inimigo_morreu(_inimigo: Node2D) -> void:
+	abates += 1
 
 
 func _on_relogio_timeout() -> void:

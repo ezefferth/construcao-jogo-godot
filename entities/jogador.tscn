@@ -67,6 +67,9 @@ region = Rect2(32, 16, 16, 16)
 atlas = ExtResource("2_mi7s2")
 region = Rect2(48, 16, 16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ataque"]
+radius = 20.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_hurt"]
 radius = 6.0
 
@@ -172,3 +175,19 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_hurt")
+
+[node name="Ataque" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ataque")
+
+[node name="Golpe" type="ColorRect" parent="Ataque"]
+visible = false
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 22.0
+color = Color(1, 1, 1, 0.35)
